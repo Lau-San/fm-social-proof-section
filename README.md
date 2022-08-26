@@ -32,8 +32,7 @@ Users should be able to:
 
 <!-- TODO: Solution URL -->
 <!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
-<!-- TODO: Live Site URL -->
-<!-- - Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Live Site URL: [GitHub Pages](https://lau-san.github.io/fm-social-proof-section/)
 
 ## My process
 
