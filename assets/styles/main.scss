@@ -1,23 +1,317 @@
 // Fonts
 // ----------
-// TODO: Import fonts
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+// -> League Spartan : 400 - 500 - 700
 
 // Colors
 // ----------
-// TODO: Add color palette
+
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
 
 // Breakpoints
 // ---------
-// TODO: Make this thing responsive
+
+$sm: 768px;
+$md: 1024px;
+$lg: 1280px;
 
 // Normalizing
 // ----------
-// TODO: Normalize stuff
+
+:root {
+	font-size: 15px;
+}
+
+*,
+*::before,
+*::after {
+	font-family: 'League Spartan', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
 // Styling
 // ----------
-// TODO: Style the site
 
-// Attribution
-// ----------
-// TODO: Style the attribution
+body {
+	background: //
+		url(../images/bg-pattern-top-mobile.svg) no-repeat top / contain,
+		url(../images/bg-pattern-bottom-mobile.svg) no-repeat bottom / contain;
+	min-height: 100vh;
+
+	@media (min-width: $md) {
+		background: //
+			url(../images/bg-pattern-top-desktop.svg) no-repeat top left,
+			url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
+	}
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+
+	@media (min-width: $lg) {
+		overflow: hidden;
+	}
+}
+
+.social-proof {
+	margin: 5rem 1.5rem;
+
+	@media (min-width: $lg) {
+		display: grid;
+		grid-template: 1fr 1fr / 1fr 1fr;
+		width: 70%;
+		margin: 0;
+	}
+}
+
+// Hero (I guess?)
+
+.hero {
+	@media (min-width: $lg) {
+		padding: 0 0 2.5rem 0;
+	}
+
+	h2 {
+		color: $very-dark-magenta;
+		font-size: 2.5rem;
+		font-weight: 700;
+		text-align: center;
+		width: clamp(15ch, 80%, 20ch);
+		margin: 0 auto;
+
+		animation-name: fade-in;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+		animation-delay: 0.1s;
+		animation-fill-mode: backwards;
+
+		@media (min-width: $lg) {
+			font-size: 3.2rem;
+			text-align: left;
+			margin: 0;
+		}
+	}
+
+	p {
+		color: $dark-grayish-magenta;
+		font-size: 1.18rem;
+		font-weight: 500;
+		text-align: center;
+		line-height: 1.2em;
+		width: clamp(330px, 100%, 518px);
+		margin: 0 auto;
+		margin-top: 1.2rem;
+
+		animation-name: fade-in;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+		animation-delay: 0.5s;
+		animation-fill-mode: backwards;
+
+		@media (min-width: $lg) {
+			font-size: 1rem;
+			text-align: left;
+			width: 70%;
+			margin: 0;
+			margin-top: 1.8rem;
+		}
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+}
+
+// Ratings
+
+.ratings {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	max-width: 500px;
+	margin: 0 auto;
+	margin-top: 2.5rem;
+
+	@media (min-width: $lg) {
+		max-width: none;
+		margin: 0;
+		margin-left: 2rem;
+	}
+}
+
+.rating {
+	background: $light-grayish-magenta;
+	border-radius: 0.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.6rem;
+	width: 100%;
+	padding: 0.8rem 0;
+
+	animation-name: slide-in-up;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-out;
+	animation-delay: 0.1s;
+	animation-fill-mode: backwards;
+
+	&:first-child {
+		animation-delay: 0s;
+	}
+
+	&:last-child {
+		animation-delay: 0.2s;
+	}
+
+	@media (min-width: $lg) {
+		width: 400px;
+		flex-direction: row;
+		justify-content: flex-start;
+		gap: 1.5rem;
+		padding: 1rem 1.5rem;
+		animation-name: slide-in-left;
+
+		&:first-child {
+			align-self: flex-start;
+		}
+
+		&:last-child {
+			align-self: flex-end;
+		}
+	}
+}
+
+@keyframes slide-in-left {
+	from {
+		transform: translateX(50%) scale(1.5);
+		opacity: 0;
+	}
+}
+
+.stars {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.star-icon {
+	width: 15px;
+}
+
+.rating-text {
+	color: $very-dark-magenta;
+	font-weight: 700;
+}
+
+// Reviews
+
+.reviews {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	max-width: 500px;
+	margin: 0 auto;
+	margin-top: 3rem;
+
+	@media (min-width: $lg) {
+		grid-column: 1 / -1;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+		width: 100%;
+		max-width: none;
+		margin: 1.2rem 0;
+	}
+}
+
+.review {
+	background: $very-dark-magenta;
+	border-radius: 0.5em;
+	color: #fff;
+	padding: 2.5rem 2rem;
+
+	animation-name: slide-in-up;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-out;
+	animation-delay: 0.6s;
+	animation-fill-mode: backwards;
+	transition: transform 0.5s ease;
+
+	&:first-child {
+		animation-delay: 0.5s;
+	}
+
+	&:last-child {
+		animation-delay: 0.7s;
+	}
+
+	@media (min-width: $lg) {
+		&:first-child {
+			align-self: flex-start;
+		}
+
+		&:last-child {
+			align-self: flex-end;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	p {
+		font-weight: 500;
+		margin-top: 1.5rem;
+	}
+}
+
+@keyframes slide-in-up {
+	from {
+		transform: translateY(15%);
+		opacity: 0;
+	}
+}
+
+.buyer {
+	display: flex;
+
+	img {
+		border-radius: 50%;
+		width: 32px;
+	}
+}
+
+.buyer-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 1.5rem;
+
+	h5 {
+		font-weight: 700;
+	}
+
+	h6 {
+		color: $soft-pink;
+		margin-top: 0.2rem;
+	}
+}

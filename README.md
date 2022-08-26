@@ -13,10 +13,8 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -27,7 +25,8 @@ Users should be able to:
 - View the optimal layout for the section depending on their device's screen size
 
 ### Screenshot
-<!-- TODO: Screenshot -->
+
+![](./screenshot.png)
 
 ### Links
 
@@ -39,25 +38,21 @@ Users should be able to:
 ## My process
 
 ### Built with
-<!-- TODO: Built with -->
 
-<!-- - Semantic HTML5 markup -->
-<!-- - Flexbox -->
-<!-- - CSS Grid -->
-<!-- - Mobile-first workflow -->
+- Semantic HTML5 markup
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Sass](https://sass-lang.com)
 
 ### What I learned
-<!-- TODO: What I learned -->
 
-### Continued development
-<!-- TODO: Continued development -->
+I learned to make animations with CSS :)
 
 ### Useful resources
-<!-- TODO: Useful resources -->
+
+- [web.dev CSS Course | Animations](https://web.dev/learn/css/animations/) - I used this to learn how to make CSS animations with keyframes.
 
 ## Author
 
 - Frontend Mentor - [@Lau-San](https://www.frontendmentor.io/profile/Lau-San)
-
-## Acknowledgments
-<!-- TODO: Acknowledgements -->

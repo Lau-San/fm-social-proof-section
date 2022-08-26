@@ -1,1 +1,311 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+:root {
+  font-size: 15px;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../images/bg-pattern-top-mobile.svg) no-repeat top/contain, url(../images/bg-pattern-bottom-mobile.svg) no-repeat bottom/contain;
+  min-height: 100vh;
+}
+@media (min-width: 1024px) {
+  body {
+    background: url(../images/bg-pattern-top-desktop.svg) no-repeat top left, url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+@media (min-width: 1280px) {
+  main {
+    overflow: hidden;
+  }
+}
+
+.social-proof {
+  margin: 5rem 1.5rem;
+}
+@media (min-width: 1280px) {
+  .social-proof {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr;
+    width: 70%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    padding: 0 0 2.5rem 0;
+  }
+}
+.hero h2 {
+  color: hsl(300deg, 43%, 22%);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  width: clamp(15ch, 80%, 20ch);
+  margin: 0 auto;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+@media (min-width: 1280px) {
+  .hero h2 {
+    font-size: 3.2rem;
+    text-align: left;
+    margin: 0;
+  }
+}
+.hero p {
+  color: hsl(303deg, 10%, 53%);
+  font-size: 1.18rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.2em;
+  width: clamp(330px, 100%, 518px);
+  margin: 0 auto;
+  margin-top: 1.2rem;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+@media (min-width: 1280px) {
+  .hero p {
+    font-size: 1rem;
+    text-align: left;
+    width: 70%;
+    margin: 0;
+    margin-top: 1.8rem;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+.ratings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+}
+@media (min-width: 1280px) {
+  .ratings {
+    max-width: none;
+    margin: 0;
+    margin-left: 2rem;
+  }
+}
+
+.rating {
+  background: hsl(300deg, 24%, 96%);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.8rem 0;
+  -webkit-animation-name: slide-in-up;
+          animation-name: slide-in-up;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+.rating:first-child {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.rating:last-child {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+@media (min-width: 1280px) {
+  .rating {
+    width: 400px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    -webkit-animation-name: slide-in-left;
+            animation-name: slide-in-left;
+  }
+  .rating:first-child {
+    align-self: flex-start;
+  }
+  .rating:last-child {
+    align-self: flex-end;
+  }
+}
+
+@-webkit-keyframes slide-in-left {
+  from {
+    transform: translateX(50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(50%) scale(1.5);
+    opacity: 0;
+  }
+}
+.stars {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.star-icon {
+  width: 15px;
+}
+
+.rating-text {
+  color: hsl(300deg, 43%, 22%);
+  font-weight: 700;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+@media (min-width: 1280px) {
+  .reviews {
+    grid-column: 1/-1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: none;
+    margin: 1.2rem 0;
+  }
+}
+
+.review {
+  background: hsl(300deg, 43%, 22%);
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 2.5rem 2rem;
+  -webkit-animation-name: slide-in-up;
+          animation-name: slide-in-up;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  transition: transform 0.5s ease;
+}
+.review:first-child {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.review:last-child {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+@media (min-width: 1280px) {
+  .review:first-child {
+    align-self: flex-start;
+  }
+  .review:last-child {
+    align-self: flex-end;
+  }
+  .review:hover {
+    transform: scale(1.1);
+  }
+}
+.review p {
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+
+@-webkit-keyframes slide-in-up {
+  from {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+}
+.buyer {
+  display: flex;
+}
+.buyer img {
+  border-radius: 50%;
+  width: 32px;
+}
+
+.buyer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.5rem;
+}
+.buyer-details h5 {
+  font-weight: 700;
+}
+.buyer-details h6 {
+  color: hsl(333deg, 80%, 67%);
+  margin-top: 0.2rem;
+}/*# sourceMappingURL=main.css.map */
